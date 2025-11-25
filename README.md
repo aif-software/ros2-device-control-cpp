@@ -21,7 +21,8 @@ colcon build
 ```
 
 ## Running
-The package names can be found in src/<project-folder>/package.xml. 
+
+The package names can be found in src/<project-folder>/package.xml.
 There is a line called "name" which tells the name of the specific package.
 
 This is not to be confused with the folder name which can be whatever.
@@ -47,7 +48,7 @@ on where the device actually lands on your computer.
 docker build -t ros-devices .
 
 # Run container
-docker run --device=/dev/video0:/dev/video4 --network=host ros-devices:latest
+docker run --device=<flir-number-1>:/dev/video4 --device=<flir-number-2>:/dev/video6 --network=host ros-devices:latest
 ```
 
 ## ROS node architecture
